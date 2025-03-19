@@ -15,6 +15,8 @@
 #
 
 TARGET_CHIPSET := sdm710
+# Fix error with vendor/lib64/libnos_transport.so
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 PRODUCT_SOONG_NAMESPACES += \
     device/google/bonito \

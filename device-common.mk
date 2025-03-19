@@ -25,10 +25,23 @@ include device/google/bonito/device-audio-mfg.mk
 include device/google/bonito/device.mk
 
 #Ship GCam
-$(call inherit-product, vendor/Camera/b4s4/config.mk)
+# $(call inherit-product, vendor/Camera/b4s4/config.mk)
 
-# Device now uses mini_gapps
-TARGET_USES_MINI_GAPPS := true
+# GMS 
+
+WITH_GMS := true
+TARGET_CORE_GMS := false
+TARGET_INCLUDE_GOOGLE_DIALER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
+TARGET_CORE_GMS_EXTRAS := false
+BOARD_EXT4_SHARE_DUP_BLOCKS := true
+
+# RISING STUFF
+RISING_MAINTAINER=lumax
+
+# Ship Basic Call Recorder
+TARGET_PREBUILT_BCR := true
+TARGET_ENABLE_BLUR := true
 
 # Maybe will fix bootanimations ?
 TARGET_BOOT_ANIMATION_RES := 1080

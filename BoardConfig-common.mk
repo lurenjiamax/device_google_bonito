@@ -16,6 +16,8 @@
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
+# Fix error with vendor/lib64/libnos_transport.so
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 TARGET_BOARD_PLATFORM := sdm710
 TARGET_BOARD_INFO_FILE := device/google/bonito/board-info.txt
